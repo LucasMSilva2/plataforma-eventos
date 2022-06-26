@@ -3,6 +3,8 @@ import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
+import reactIcone from "../assets/reactIcone.png";
+import codeMockup from "../assets/codeMockup.png"
 
 
 export function Subscribe () {
@@ -29,7 +31,8 @@ export function Subscribe () {
     
     return (
         <div className="min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center">
-            <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
+            <img src={reactIcone} className="absolute mt-5 " alt="" />
+            <div className="relative w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
                 <div className="max-w-[640px]">
                     <Logo />
                     <h1 className="mt-8 text-[2.5rem] leading-tight">
@@ -39,6 +42,7 @@ export function Subscribe () {
                         Em apenas uma semana você vai dominar na prática uma das tecnologias mais utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
                     </p>
                 </div>
+
 
                 <div className="p-8 bg-gray-700 borber border-gray-500 rounded">
                     <strong className="text-2xl mb-6 block">Inscreva-se gratuitamente</strong>
@@ -66,10 +70,11 @@ export function Subscribe () {
                             </button>
                     </form>
                 </div>
+                    
 
             </div>
 
-            <img src="/src/assets/code-mockup.png" className="mt-10" alt="" />
+            <img src={ codeMockup } className="mt-10" alt="" />
         </div>
     );
 }
